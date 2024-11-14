@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Safer
+name: safer
 
 # Controls when the workflow will run
 on:
@@ -20,10 +20,20 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: "Mi primer job"
+      - name: "Paso 1"
         run: |
           echo "Hola mundo"
           hostname
           pwd
-          ls -1
+          ls -l
+          find .
+      - name: Clonando el repositorio
+        uses: actions/checkout@v4
+
+      - name: "Paso 1"
+        run: |
+          echo "Hola mundo"
+          hostname
+          pwd
+          ls -l
           find .
